@@ -227,8 +227,8 @@ const Intro = ({ theme }: { theme: ThemeStyle }) => (
           className="relative"
         >
           <img 
-            src="https://images.unsplash.com/photo-1522071823991-b9671f49616c?q=80&w=2070&auto=format&fit=crop" 
-            alt="Office Recruitment" 
+            src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop" 
+            alt="Employees working in a modern office" 
             className={`shadow-2xl relative z-10 transition-all duration-500 w-full h-auto object-cover ${
               theme === 'organic' ? 'rounded-[3rem]' : 
               theme === 'brutalist' ? 'rounded-none border-4 border-black' : 
