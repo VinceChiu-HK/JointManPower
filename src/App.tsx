@@ -397,7 +397,7 @@ const Contact = ({ theme }: { theme: ThemeStyle }) => (
           <img 
             src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2076&auto=format&fit=crop" 
             alt="Job Interview Assessment" 
-            className={`w-full h-64 object-cover ${theme === 'brutalist' ? 'border-b-4 border-black' : ''}`}
+            className={`w-full h-96 object-cover ${theme === 'brutalist' ? 'border-b-4 border-black' : ''}`}
             referrerPolicy="no-referrer"
           />
           <div className="p-8 flex flex-col justify-center items-center text-center flex-grow">
