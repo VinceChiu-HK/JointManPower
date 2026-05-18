@@ -391,16 +391,10 @@ const Contact = ({ theme }: { theme: ThemeStyle }) => (
             </div>
           </div>
         </div>
-        <div className={`overflow-hidden rounded-3xl text-gray-900 flex flex-col shadow-2xl transition-all duration-500 ${
+        <div className={`rounded-3xl text-gray-900 flex flex-col shadow-2xl transition-all duration-500 ${
           theme === 'brutalist' ? 'bg-yellow-300 border-4 border-black rounded-none shadow-none' : 'bg-white'
         }`}>
-          <img 
-            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2076&auto=format&fit=crop" 
-            alt="Job Interview Assessment" 
-            className={`w-full h-72 object-cover object-top ${theme === 'brutalist' ? 'border-b-4 border-black' : ''}`}
-            referrerPolicy="no-referrer"
-          />
-          <div className="p-8 flex flex-col justify-center items-center text-center flex-grow">
+          <div className="p-8 md:p-12 flex flex-col justify-center items-center text-center flex-grow">
             <h3 className="text-2xl font-bold mb-4 italic uppercase">獲取方案</h3>
             <p className="text-xl font-bold leading-relaxed mb-4">
               如需獲取方案<br/>
