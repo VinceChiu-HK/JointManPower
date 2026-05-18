@@ -391,18 +391,26 @@ const Contact = ({ theme }: { theme: ThemeStyle }) => (
             </div>
           </div>
         </div>
-        <div className={`p-8 rounded-3xl text-gray-900 flex flex-col justify-center shadow-2xl transition-all duration-500 ${
+        <div className={`overflow-hidden rounded-3xl text-gray-900 flex flex-col shadow-2xl transition-all duration-500 ${
           theme === 'brutalist' ? 'bg-yellow-300 border-4 border-black rounded-none shadow-none' : 'bg-white'
         }`}>
-          <h3 className="text-2xl font-bold mb-6">即刻獲取方案</h3>
-          <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
-            <input type="text" placeholder="您的姓名" className="w-full px-5 py-3 rounded-xl bg-gray-50 border border-gray-200 outline-none" />
-            <input type="email" placeholder="電子郵箱" className="w-full px-5 py-3 rounded-xl bg-gray-50 border border-gray-200 outline-none" />
-            <textarea rows={4} placeholder="您的具體需求" className="w-full px-5 py-3 rounded-xl bg-gray-50 border border-gray-200 outline-none"></textarea>
-            <button className={`w-full py-4 font-bold rounded-xl shadow-lg active:scale-95 transition-all ${
-              theme === 'brutalist' ? 'bg-black text-white hover:bg-gray-800 rounded-none' : 'bg-blue-600 text-white hover:bg-blue-700'
-            }`}>送出信息</button>
-          </form>
+          <img 
+            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2076&auto=format&fit=crop" 
+            alt="Job Interview Assessment" 
+            className={`w-full h-64 object-cover ${theme === 'brutalist' ? 'border-b-4 border-black' : ''}`}
+            referrerPolicy="no-referrer"
+          />
+          <div className="p-8 flex flex-col justify-center items-center text-center flex-grow">
+            <h3 className="text-2xl font-bold mb-4 italic uppercase">獲取方案</h3>
+            <p className="text-xl font-bold leading-relaxed mb-4">
+              如需獲取方案<br/>
+              請聯繫網站中顯示的<br/>
+              <span className={theme === 'brutalist' ? 'bg-black text-yellow-300 px-2 py-1' : 'bg-blue-600 text-white px-2 py-1'}>電子郵箱</span>
+            </p>
+            <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-tighter">
+              <Mail className="w-4 h-4" /> fionna@jointmanpower.com
+            </div>
+          </div>
         </div>
       </div>
     </div>
