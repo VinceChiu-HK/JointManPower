@@ -85,8 +85,33 @@ const StyleSelector = ({ onSelect }: { onSelect: (style: ThemeStyle) => void }) 
         animate={{ opacity: 1, y: 0 }}
         className="text-center mb-12"
       >
-        <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-600 rounded-2xl shadow-xl mb-6">
-          <Building2 className="w-10 h-10 text-white" />
+        <div className="inline-flex items-center justify-center w-20 h-20 bg-white rounded-2xl shadow-xl mb-6 border border-gray-100">
+          <svg viewBox="0 0 110 100" className="w-14 h-14">
+            <path 
+              d="M 40 45 C 30 30, 45 15, 58 15 C 70 15, 78 30, 78 50 C 78 70, 65 80, 50 82" 
+              stroke="#000000" 
+              strokeWidth="6" 
+              fill="none" 
+              strokeLinecap="round"
+            />
+            <path 
+              d="M 75 62 C 85 55, 95 68, 85 80 C 75 92, 55 88, 42 80 C 30 72, 25 55, 30 46" 
+              stroke="#000000" 
+              strokeWidth="6" 
+              fill="none" 
+              strokeLinecap="round"
+            />
+            <path 
+              d="M 45 80 C 30 80, 20 68, 28 55 C 35 42, 45 40, 52 42" 
+              stroke="#000000" 
+              strokeWidth="6" 
+              fill="none" 
+              strokeLinecap="round"
+            />
+            <circle cx="58" cy="18" r="10" fill="#E52B1E" stroke="#ffffff" strokeWidth="2" />
+            <circle cx="21" cy="68" r="10" fill="#09773F" stroke="#ffffff" strokeWidth="2" />
+            <circle cx="85" cy="68" r="10" fill="#1B318C" stroke="#ffffff" strokeWidth="2" />
+          </svg>
         </div>
         <h1 className="text-4xl font-black text-gray-900 mb-4 tracking-tight">眾誠人力資源 - 網站風格選擇</h1>
         <p className="text-gray-500 text-lg">請選擇一個最能體現您品牌形象的視覺風格</p>
@@ -139,9 +164,45 @@ const Nav = ({ theme }: { theme: ThemeStyle }) => (
     'bg-white/80 border-gray-100'
   }`}>
     <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
-      <div className="flex items-center gap-2">
-        <Building2 className={`w-8 h-8 ${theme === 'luxury' ? 'text-white' : theme === 'technical' ? 'text-black' : theme === 'organic' ? 'text-[#5A5A40]' : 'text-blue-700'}`} />
-        <span className={`text-xl font-bold tracking-tight ${theme === 'luxury' ? 'text-white font-light' : 'text-gray-900'}`}>眾誠人力資源</span>
+      <div className="flex items-center gap-3">
+        <svg viewBox="0 0 110 100" className="w-11 h-11 flex-shrink-0">
+          <path 
+            d="M 40 45 C 30 30, 45 15, 58 15 C 70 15, 78 30, 78 50 C 78 70, 65 80, 50 82" 
+            stroke={theme === 'luxury' ? '#ffffff' : '#000000'} 
+            strokeWidth="6" 
+            fill="none" 
+            strokeLinecap="round"
+          />
+          <path 
+            d="M 75 62 C 85 55, 95 68, 85 80 C 75 92, 55 88, 42 80 C 30 72, 25 55, 30 46" 
+            stroke={theme === 'luxury' ? '#ffffff' : '#000000'} 
+            strokeWidth="6" 
+            fill="none" 
+            strokeLinecap="round"
+          />
+          <path 
+            d="M 45 80 C 30 80, 20 68, 28 55 C 35 42, 45 40, 52 42" 
+            stroke={theme === 'luxury' ? '#ffffff' : '#000000'} 
+            strokeWidth="6" 
+            fill="none" 
+            strokeLinecap="round"
+          />
+          <circle cx="58" cy="18" r="10" fill="#E52B1E" stroke={theme === 'luxury' ? '#000000' : '#ffffff'} strokeWidth="2" />
+          <circle cx="21" cy="68" r="10" fill="#09773F" stroke={theme === 'luxury' ? '#000000' : '#ffffff'} strokeWidth="2" />
+          <circle cx="85" cy="68" r="10" fill="#1B318C" stroke={theme === 'luxury' ? '#000000' : '#ffffff'} strokeWidth="2" />
+        </svg>
+        <div className="flex flex-col justify-center">
+          <span className={`text-base md:text-lg font-bold tracking-wide leading-tight ${
+            theme === 'luxury' ? 'text-white font-normal' : 'text-gray-900'
+          }`}>
+            眾誠人力資源（香港）有限公司
+          </span>
+          <span className={`text-[8.5px] md:text-[9.5px] uppercase font-bold tracking-wider leading-none mt-0.5 ${
+            theme === 'luxury' ? 'text-gray-400 font-normal' : 'text-gray-500'
+          }`}>
+            JOINT MANPOWER COMPANY LIMITED
+          </span>
+        </div>
       </div>
       <div className="hidden md:flex items-center gap-8 text-sm font-medium">
         <a href="#intro" className={`${theme === 'luxury' ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-blue-700'} transition-colors uppercase tracking-widest`}>關於我們</a>
@@ -415,9 +476,41 @@ const Footer = ({ theme }: { theme: ThemeStyle }) => (
   <footer className={`py-12 border-t transition-colors duration-500 ${theme === 'luxury' ? 'bg-black border-gray-900 text-gray-700' : 'bg-gray-950 border-gray-900 text-gray-400'}`}>
     <div className="max-w-7xl mx-auto px-4">
       <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-        <div className="flex items-center gap-2">
-          <Building2 className="w-6 h-6" />
-          <span className={`text-lg font-bold ${theme === 'luxury' ? 'text-gray-500 italic font-serif' : 'text-white'}`}>眾誠人力資源 (香港) 有限公司</span>
+        <div className="flex items-center gap-3">
+          <svg viewBox="0 0 110 100" className="w-8 h-8 flex-shrink-0">
+            <path 
+              d="M 40 45 C 30 30, 45 15, 58 15 C 70 15, 78 30, 78 50 C 78 70, 65 80, 50 82" 
+              stroke={theme === 'luxury' ? '#4b5563' : '#ffffff'} 
+              strokeWidth="6.5" 
+              fill="none" 
+              strokeLinecap="round"
+            />
+            <path 
+              d="M 75 62 C 85 55, 95 68, 85 80 C 75 92, 55 88, 42 80 C 30 72, 25 55, 30 46" 
+              stroke={theme === 'luxury' ? '#4b5563' : '#ffffff'} 
+              strokeWidth="6.5" 
+              fill="none" 
+              strokeLinecap="round"
+            />
+            <path 
+              d="M 45 80 C 30 80, 20 68, 28 55 C 35 42, 45 40, 52 42" 
+              stroke={theme === 'luxury' ? '#4b5563' : '#ffffff'} 
+              strokeWidth="6.5" 
+              fill="none" 
+              strokeLinecap="round"
+            />
+            <circle cx="58" cy="18" r="10" fill="#E52B1E" stroke={theme === 'luxury' ? '#000000' : '#ffffff'} strokeWidth="1.5" />
+            <circle cx="21" cy="68" r="10" fill="#09773F" stroke={theme === 'luxury' ? '#000000' : '#ffffff'} strokeWidth="1.5" />
+            <circle cx="85" cy="68" r="10" fill="#1B318C" stroke={theme === 'luxury' ? '#000000' : '#ffffff'} strokeWidth="1.5" />
+          </svg>
+          <div className="flex flex-col">
+            <span className={`text-sm md:text-base font-bold tracking-wide ${theme === 'luxury' ? 'text-gray-400' : 'text-white'}`}>
+              眾誠人力資源（香港）有限公司
+            </span>
+            <span className={`text-[8px] md:text-[9px] uppercase font-bold tracking-wider mt-0.5 ${theme === 'luxury' ? 'text-gray-600 font-normal' : 'text-gray-400'}`}>
+              JOINT MANPOWER COMPANY LIMITED
+            </span>
+          </div>
         </div>
         <div className="text-sm">© {new Date().getFullYear()} Joint Manpower (HK) Limited. All rights reserved.</div>
       </div>
